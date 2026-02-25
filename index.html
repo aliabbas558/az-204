@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Abbas – Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0078d4, #005a9e);
+      color: #fff;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    header .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 16px;
+      background: #cfe4f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header h1 { font-size: 2.4rem; margin-bottom: 6px; }
+
+    header p.tagline {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.2s;
+    }
+
+    .badge:hover { background: rgba(255,255,255,0.28); }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    @media (max-width: 640px) { main { grid-template-columns: 1fr; } }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    section.full-width { grid-column: 1 / -1; }
+
+    section h2 {
+      font-size: 1.15rem;
+      color: #0078d4;
+      border-bottom: 2px solid #e0ecf8;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* About */
+    .about-text { line-height: 1.7; color: #555; }
+
+    /* Experience */
+    .job { margin-bottom: 22px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+    .job-title { font-weight: 700; font-size: 1rem; }
+    .job-company { color: #0078d4; font-weight: 600; }
+    .job-period { font-size: 0.85rem; color: #888; }
+    .job ul { margin-top: 8px; padding-left: 18px; color: #555; line-height: 1.65; }
+    .job ul li { margin-bottom: 4px; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 16px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-label { font-weight: 600; font-size: 0.9rem; color: #555; margin-bottom: 8px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      background: #e0ecf8;
+      color: #005a9e;
+      border-radius: 14px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Education / Certifications */
+    .cert-item { margin-bottom: 14px; }
+    .cert-item:last-child { margin-bottom: 0; }
+    .cert-name { font-weight: 700; }
+    .cert-issuer { color: #0078d4; font-size: 0.9rem; }
+    .cert-year { font-size: 0.85rem; color: #888; }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer a { color: #0078d4; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="avatar">👤</div>
+    <h1>Ali Abbas</h1>
+    <p class="tagline">Azure Developer &amp; Cloud Engineer</p>
+    <div class="badges">
+      <a class="badge"
+         href="https://www.linkedin.com/in/ali-abbas-97j/"
+         target="_blank" rel="noopener noreferrer">
+        🔗 LinkedIn: ali-abbas-97j
+      </a>
+      <a class="badge"
+         href="https://github.com/aliabbas558"
+         target="_blank" rel="noopener noreferrer">
+        🐙 GitHub: aliabbas558
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About -->
+    <section class="full-width">
+      <h2>About Me</h2>
+      <p class="about-text">
+        Passionate Azure Developer and Cloud Engineer with hands-on experience designing, building,
+        and deploying cloud-native solutions on Microsoft Azure. I hold the
+        <strong>AZ-204: Developing Solutions for Microsoft Azure</strong> certification and enjoy
+        leveraging modern DevOps practices, AI-assisted development tools (GitHub Copilot), and
+        serverless architectures to deliver scalable, reliable applications.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="full-width">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Azure Cloud Developer</span>
+          <span class="job-period">2023 – Present</span>
+        </div>
+        <div class="job-company">Cloud Solutions Practice</div>
+        <ul>
+          <li>Designed and deployed microservices on Azure Kubernetes Service (AKS) and Azure Container Apps.</li>
+          <li>Built event-driven workflows using Azure Service Bus, Azure Event Grid, and Azure Functions.</li>
+          <li>Implemented secure API management solutions with Azure API Management and Azure Active Directory.</li>
+          <li>Automated infrastructure provisioning using Bicep and Azure DevOps pipelines (CI/CD).</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Software Developer</span>
+          <span class="job-period">2021 – 2023</span>
+        </div>
+        <div class="job-company">Technology Services Team</div>
+        <ul>
+          <li>Developed RESTful APIs and web applications using C# / .NET and Node.js.</li>
+          <li>Integrated Azure Blob Storage, Azure SQL Database, and Azure Cosmos DB into production systems.</li>
+          <li>Participated in Agile sprints and code reviews, improving code quality and team velocity.</li>
+          <li>Adopted GitHub Copilot for accelerated feature development and pair-programming workflows.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Azure Services</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure Functions</span>
+          <span class="skill-tag">App Service</span>
+          <span class="skill-tag">AKS</span>
+          <span class="skill-tag">Service Bus</span>
+          <span class="skill-tag">Event Grid</span>
+          <span class="skill-tag">Cosmos DB</span>
+          <span class="skill-tag">Azure SQL</span>
+          <span class="skill-tag">API Management</span>
+          <span class="skill-tag">Key Vault</span>
+          <span class="skill-tag">Blob Storage</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Languages &amp; Frameworks</div>
+        <div class="skill-tags">
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">.NET</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Bicep</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">DevOps &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GitHub Copilot</span>
+          <span class="skill-tag">Terraform</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section>
+      <h2>Certifications &amp; Education</h2>
+
+      <div class="cert-item">
+        <div class="cert-name">AZ-204: Developing Solutions for Microsoft Azure</div>
+        <div class="cert-issuer">Microsoft</div>
+        <div class="cert-year">In progress / Achieved</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-name">GitHub Copilot Fundamentals</div>
+        <div class="cert-issuer">GitHub / Microsoft</div>
+        <div class="cert-year">2025</div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-name">Bachelor of Computer Science</div>
+        <div class="cert-issuer">University – Computer Science Department</div>
+        <div class="cert-year">Graduated 2021</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Connect with me on
+      <a href="https://www.linkedin.com/in/ali-abbas-97j/" target="_blank" rel="noopener noreferrer">LinkedIn (ali-abbas-97j)</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/aliabbas558" target="_blank" rel="noopener noreferrer">GitHub (aliabbas558)</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 Ali Abbas. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
